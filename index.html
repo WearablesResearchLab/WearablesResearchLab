@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Te Kura Mahara — Wearables Research Lab</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/img/lab_logo.svg" alt="Lab Logo" height="80" />
+        <!-- <span class="site-title">Te Kura Mahara</span> -->
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="person.html">People</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <video autoplay muted loop class="hero-video">
+      <source src="assets/video/output.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay">
+      <h1>Wearables Research Lab</h1>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <h2>Welcome</h2>
+    <p>Please Note this is a <i>DRAFT VERSION!</i> you are welcome to suggest or make changes :).</p>
+
+    <section id="summaries">
+      <h3>Recent Posts</h3>
+      <div id="summary-container" class="summary-list">
+        <!-- Summaries will be loaded here -->
+      </div>
+    </section>
+  </main>
+
+<footer>
+  <div class="footer-content">
+    <img src="assets/img/uni_logo.png" alt="University Logo">
+    <div class="footer-text">
+      <p>&copy; 2025 Your University Name</p>
+      <p>All rights reserved</p>
+    </div>
+  </div>
+  <div class="footer-links">
+    <p><a href="about.html">About Us</a></p>
+    <p><a href="contact.html">Contact</a></p>
+  </div>
+</footer>
+
+
+  <script src="assets/js/fetchSummaries.js"></script>
+</body>
+</html>

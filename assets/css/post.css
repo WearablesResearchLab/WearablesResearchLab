@@ -1,0 +1,76 @@
+.post-main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--accent-color);
+  background-color: var(--secondary-color);
+}
+
+.post-article h1 {
+  /* color: var(--primary-color); */
+  font-size: 2.5rem;
+  margin-bottom: 0.1rem;
+}
+
+.post-meta {
+  /* color: var(--primary-color); */
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem 0;
+}
+
+footer {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+footer img {
+  height: 40px;
+}
+
+footer .footer-text p {
+  margin: 0;
+}
+
+
+
+/* Container for highlighted code */
+.codehilite {
+  background: #2d2d2d;
+  color: #ccc;
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: 5px;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/* Styling for code inside the container */
+.codehilite code {
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: pre;
+}
+
+/* Optional: add color for keywords, strings, comments, etc. */
+/* These class names are from Pygments */
+.token.keyword { color: #cc99cd; }
+.token.string { color: #7ec699; }
+.token.comment { color: #999999; font-style: italic; }
+.token.operator { color: #67cdcc; }
+.token.name { color: #f99157; }
+.token.number { color: #f2777a; }

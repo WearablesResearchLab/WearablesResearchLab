@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Example Md Page!",
+    "date": "2025-06-13",
+    "description": "this description will be shown in previews and listings.",
+    "url": "test.html"
+  },
+  {
+    "title": "Sample Blog Post Title",
+    "date": "2025-06-10",
+    "description": "A short summary of this post for previews and listings.",
+    "url": "template.html"
+  },
+  {
+    "title": "options",
+    "date": "2000-01-01",
+    "description": "",
+    "url": "options.html"
+  }
+]
