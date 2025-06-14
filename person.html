@@ -1,118 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>People — Wearables Research Lab</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="stylesheet" href="assets/css/person.css" />
+  <script src="assets/js/components.js"></script>
 </head>
 
+
 <body>
+
   <!-- Navigation Bar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="assets/img/lab_logo.svg" alt="Lab Logo" height="80" />
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <!-- <li><a href="person.html">People</a></li> -->
-      </ul>
-    </nav>
-  </header>
+  <site-header></site-header>
 
   <main class="people-main">
     <section class="section" id="professors">
       <h2>Professors</h2>
       <div class="people-list">
-
+        <article class="person">
+          <img src="assets/img/jemma.jpeg" alt="Dr. Jemma König" />
+          <h3 class="profile_name">Dr. Jemma König</h3>
+          <p>Jemma is a Lecturer in the Department of Software Engineering, in the School of Computing and Mathematical
+            Sciences, at the University of Waikato. Her research centres on Internet of Things (IoT), wearable
+            technology, and big data for health applications.</p>
+        </article>
 
         <article class="person">
-          <img src="assets/img/professor1.jpg" alt="Dr. Mitchell Head" />
-          <h3>Dr. Mitchell Head</h3>
-          <h3>To be filled in..</h3>
+          <img src="assets/img/mitchell.png" alt="Dr Mitchell Head" />
+          <h3 class="profile_name">Dr Mitchell Head</h3>
+          <p>Dr Head is a neuroscientist & neuroengineering working at the interface of Mātauranga Māori and biomedical
+            sciences, interested in optimum states of consciousness, brain-computer interface, and the health potential
+            of treatments derived from native taonga species.</p>
         </article>
 
 
         <article class="person">
-          <img src="assets/img/professor2.jpg" alt="Dr. Jemma König" />
-          <h3>Dr. Jemma König</h3>
-          <h3>To be filled in..</h3>
-        </article>
-
-           <article class="person">
-          <img src="assets/img/professor2.jpg" alt="To be filled in.." />
-          <h3>To be filled in..</h3>
-          <p></p>
+          <img src="assets/img/mahonri.png" alt="Dr Mahonri Owen" />
+          <h3 class="profile_name">Dr Mahorni Owen</h3>
+          <p>Dr. Mahonri Owen is an academic and researcher at the University of Waikato, known for his work in neural
+            prosthetics. He holds a place in the School of Engineering, focusing on the development of brain-controlled
+            prosthetic hands and by extension biomedical engineering.
         </article>
 
 
       </div>
     </section>
+
 
     <section class="section" id="students">
+
+    </section>
       <h2>Current Students</h2>
       <div class="people-list">
-
-
-        <article class="person">
-          <img src="assets/img/student1.jpg" alt="Ryan Manchester" />
-          <h3>Ryan Manchester</h3>
-          <p>Msc student studying Wearables</p>
+        <!-- <article class="person">
+          <img src="assets/img/ryan.jpeg" alt="Ryan Manchester" />
+          <h3 class="profile_name">Ryan Manchester</h3>
+          <p></p>
         </article>
 
-
         <article class="person">
-          <img src="assets/img/student2.jpg" alt="Craig Shepherd" />
-          <h3>Craig Shepherd</h3>
-          <p>Honours student working on assembling an ultrasound machine for neuromodulation.</p>
-        </article>
-
-
-        <article class="person">
-          <img src="assets/img/student1.jpg" alt="Simeon Ensing" />
-          <h3>Simeon Ensing</h3>
-          <p>The Unit</p>
-        </article>
-
-        
-           <article class="person">
-          <img src="assets/img/professor2.jpg" alt="To be filled in.." />
-          <h3>To be filled in..</h3>
+          <img src="assets/img/craig.png" alt="Craig Sheperd" />
+          <h3 class="profile_name">Craig Sheperd</h3>
           <p></p>
         </article>
 
 
+        <article class="person">
+          <img src="assets/img/simeon.png" alt="Simeon Ensing" />
+          <h3 class="profile_name">Simeon Ensing</h3>
+          <p>
+        </article>
 
-      </div>
-    </section>
+        <article class="person">
+          <img src="assets/img/simeon.png" alt="Mabel Foo" />
+          <h3 class="profile_name">Mabel Foo</h3>
+          <p>
+        </article>
 
-    <section class="section" id="mentions">
-      <h2>Mentions</h2>
-      <div class="mentions">
-        <ul>
-          <li>Featured in TechCrunch for innovative wearable technology development.</li>
-          <li>Recipient of the National Science Foundation Award for IoT research.</li>
-          <li>Collaborations with industry leaders like Apple and Google.</li>
-        </ul>
-      </div>
-    </section>
+        <article class="person">
+          <img src="assets/img/simeon.png" alt="Dhana" />
+          <h3 class="profile_name">Dhana</h3>
+          <p>
+        </article> -->
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <img src="assets/img/uni_logo.png" alt="University Logo" />
-      <div class="footer-text">
-        <p>&copy; 2025 Your University Name</p>
-        <p>All rights reserved</p>
-      </div>
-    </div>
-    <div class="footer-links">
-      <p><a href="about.html">About Us</a></p>
-      <p><a href="contact.html">Contact</a></p>
-    </div>
-  </footer>
+
+  <site-footer></site-footer>
 </body>
+
 </html>

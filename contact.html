@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Web components -->
+  <script src="assets/js/components.js"></script>
+</head>
+
+<body>
+  <site-header></site-header>
+
+  <main class="contact-page">
+    <h2>Contact Us</h2>
+
+    <form action="https://formspree.io/f/xblyyrpv" method="POST" class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <!-- Optional: spam prevention -->
+      <input type="text" name="_gotcha" style="display:none">
+
+      <!-- Optional: redirect after submission -->
+      <input type="hidden" name="_next" value="thanks.html">
+
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <site-footer></site-footer>
+</body>
+</html>
