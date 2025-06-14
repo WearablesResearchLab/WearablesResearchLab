@@ -1,18 +1,3 @@
-// function registerHTMLComponent(tagName, filePath) {
-//   customElements.define(tagName, class extends HTMLElement {
-//     async connectedCallback() {
-//       const res = await fetch(filePath);
-//       if (res.ok) {
-//         this.innerHTML = await res.text();
-//       } else {
-//         this.innerHTML = `<div style="color:red;">Failed to load ${filePath}</div>`;
-//       }
-//     }
-//   });
-//   this.dispatchEvent(new CustomEvent('content-loaded', { bubbles: true }));
-//   alert('Header content loaded and event dispatched!');
-
-// }
 function registerHTMLComponent(tagName, filePath) {
   if (customElements.get(tagName)) return; // Prevent redefining
 
@@ -63,7 +48,6 @@ loadCSSFiles([
 "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css"
 ]);
 
-// loadCSS("https://cdn.jsdelivr.net/gh/obsidian-html/obsidian-html@main/src/css/obsidian.css");
 
 document.addEventListener('DOMContentLoaded', () => {
   const siteHeader = document.querySelector('site-header');
