@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>All Blog Posts - Wearables Lab</title>
+  <script src="assets/js/components.js"></script>
+  <style>
+
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <site-header></site-header>
+
+  <main>
+    <h1>Wearables Research Lab Blog Posts</h1>
+    <section class="post-list" id="post-list">
+      <!-- Posts will be inserted here by your build.py or JavaScript -->
+    </section>
+  </main>
+
+
+  <site-footer></site-footer>
+  <script type="module">
+    import { loadPostSummaries } from '/assets/js/loadPosts.js';
+    loadPostSummaries("post-list"); // all posts
+  </script>
+
+</body>
+</html>

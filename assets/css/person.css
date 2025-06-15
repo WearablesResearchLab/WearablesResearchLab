@@ -1,0 +1,57 @@
+.people-main {
+  padding: 2rem;
+  flex-grow: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: var(--accent-color);
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.people-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+.profile_name {
+  color: black;
+}
+.person {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: var(--accent-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.person:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.person img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  margin-bottom: 0.8rem;
+}
+
+.person h3 {
+  margin: 0.5rem 0 0.3rem;
+  font-weight: 700;
+  color: black;
+}
+
+.person p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--accent-color);
+}
