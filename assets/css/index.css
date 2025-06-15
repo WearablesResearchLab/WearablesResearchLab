@@ -1,3 +1,29 @@
+.back-button {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.75rem 1.25rem;
+  background-color: #f9f9f9; /* same as .summary-item bg */
+  border: 1px solid var(--border-color);
+  border-radius: 8px; /* same radius as .summary-item */
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  max-width: 100px;
+  margin-left: 10px;
+}
+
+.back-button:hover {
+  background-color: #f1f1f1; /* same as .summary-item:hover bg */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  color: var(--accent-color);
+}
+
+/* index styling */
+
 .hero {
   position: relative;
   height: 40vh;
