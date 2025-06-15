@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "21b1af7dc6d8065f",
+            "id": "d71654473fa91e96",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "test.md",
+                "file": "Options.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "test"
+              "title": "Options"
             }
           }
         ]
@@ -131,16 +131,17 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Options.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Options"
             }
           },
           {
-            "id": "eb3f32dd982f922d",
+            "id": "c71c92b73084bb14",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -165,13 +166,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "21b1af7dc6d8065f",
+  "active": "b68c8e00789a44a2",
   "lastOpenFiles": [
+    "media/Pasted image 20250610132121.png",
+    "templates/template.md",
+    "Options.md",
     "options.md",
+    "test.md",
     "media/test.png",
     "media/options.png",
-    "templates/template.md",
-    "test.md",
     "Pasted image 20250610114405.png",
     "templates/Build Me!.md",
     "templates/Build Me!.md",

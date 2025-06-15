@@ -16,7 +16,9 @@
   gap: 2rem;
   justify-content: flex-start;
 }
-
+.profile_name {
+  color: black;
+}
 .person {
   background-color: var(--background-color);
   border: 1px solid var(--border-color);
@@ -45,29 +47,11 @@
 .person h3 {
   margin: 0.5rem 0 0.3rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: black;
 }
 
 .person p {
   font-size: 0.9rem;
   line-height: 1.4;
   color: var(--accent-color);
-}
-
-.mentions {
-  background-color: var(--background-color);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  font-style: italic;
-  color: var(--accent-color);
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.mentions ul {
-  list-style: disc inside;
-  padding-left: 0;
-  margin: 0;
 }

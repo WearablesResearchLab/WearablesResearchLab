@@ -4,24 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Te Kura Mahara — Wearables Research Lab</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Web components -->
+  <script defer src="assets/js/components.js"></script>
 </head>
 
 <body>
   <!-- Navigation Bar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="assets/img/lab_logo.svg" alt="Lab Logo" height="80" />
-        <!-- <span class="site-title">Te Kura Mahara</span> -->
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="person.html">People</a></li>
-      </ul>
-    </nav>
-  </header>
+  <site-header></site-header>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -29,38 +22,26 @@
       <source src="assets/video/output.mp4" type="video/mp4" />
     </video>
     <div class="hero-overlay">
-      <h1>Wearables Research Lab</h1>
+      <h1>Te Kura Rau Mahara</h1>
+      <h2 id="subtitle">Waikato Wearables Research Lab</h2>
     </div>
   </section>
 
   <!-- Main Content -->
-  <main>
+  <main class="intro">
     <h2>Welcome</h2>
-    <p>Please Note this is a <i>DRAFT VERSION!</i> you are welcome to suggest or make changes :).</p>
+    <p>Please note this is a <i>DRAFT VERSION!</i> You are welcome to suggest or make changes :)</p>
 
-    <section id="summaries">
-      <h3>Recent Posts</h3>
-      <div id="summary-container" class="summary-list">
-        <!-- Summaries will be loaded here -->
-      </div>
-    </section>
+    <h3>Recent Posts</h3>
+    <div id="summary-container" class="summary-list"></div>
   </main>
 
-<footer>
-  <div class="footer-content">
-    <img src="assets/img/uni_logo.png" alt="University Logo">
-    <div class="footer-text">
-      <p>&copy; 2025 Your University Name</p>
-      <p>All rights reserved</p>
-    </div>
-  </div>
-  <div class="footer-links">
-    <p><a href="about.html">About Us</a></p>
-    <p><a href="contact.html">Contact</a></p>
-  </div>
-</footer>
+  <site-footer></site-footer>
 
-
-  <script src="assets/js/fetchSummaries.js"></script>
+  <!-- Load JS -->
+  <script type="module">
+    import { loadPostSummaries } from '/assets/js/loadPosts.js';
+    loadPostSummaries("summary-container", 2);
+  </script>
 </body>
 </html>

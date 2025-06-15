@@ -4,50 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ title }}</title>
-  <link rel="stylesheet" href="../assets/css/styles.css" />
-  <link rel="stylesheet" href="../assets/css/post.css" />
-  <link rel="stylesheet" href="../assets/css/pygments.css" />
+  <script defer src="../assets/js/components.js"></script>
 
 </head>
 <body>
-
-  <!-- Navigation Bar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="../assets/img/lab_logo.svg" alt="Lab Logo" height="80" />
-        <!-- <span class="site-title">Te Kura Mahara</span> -->
-      </div>
-      <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../blog.html">Back to all Blog Posts</a></li>
-        <li><a href="../person.html">People</a></li>
-      </ul>
-    </nav>
-  </header>
+  <site-header></site-header>
 
   <main class="post-main">
-    <article class="post-article">
+    <article class="post-article markdown-body">
       <header>
         <h1>{{ title }}</h1>
         <p class="post-meta">{{ date }}</p>
       </header>
-
       <section class="post-content">
         {{ content }}
       </section>
     </article>
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <img src="assets/img/uni_logo.png" alt="University Logo" height="40" />
-      <div class="footer-text">
-        <p>&copy; 2025 Waikato University</p>
-        <p>All rights reserved</p>
-      </div>
-    </div>
-  </footer>
-
+  <site-footer></site-footer>
 </body>
 </html>
