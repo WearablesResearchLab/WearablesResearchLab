@@ -1,4 +1,15 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
 
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
 
 h2 {
   text-align: center;
@@ -13,7 +24,6 @@ h2 {
   justify-content: center; /* Center horizontally */
   gap: 2rem;
   margin-top: 2rem;
-  width: 100%;
 }
 
 /* Each person card */
@@ -39,7 +49,7 @@ h2 {
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 1rem;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .profile_name {
@@ -68,12 +78,12 @@ h2 {
 }
 
 .iris:hover {
-  color: #1313a9;
+  color: #0d0d78;
   text-decoration: underline;
 }
 
 /* Mobile: stack cards and expand width */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .person {
     width: 100%;
     max-width: 90vw;
