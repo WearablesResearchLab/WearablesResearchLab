@@ -1,57 +1,81 @@
-.people-main {
-  padding: 2rem;
-  flex-grow: 1;
-  max-width: 1000px;
-  margin: 0 auto;
-  color: var(--accent-color);
+
+
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+  color: #111;
 }
 
-.section {
-  margin-bottom: 3rem;
-}
-
-.people-list {
+/* Container for people */
+.people_section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center; /* Center horizontally */
   gap: 2rem;
-  justify-content: flex-start;
+  margin-top: 2rem;
+  width: 100%;
 }
-.profile_name {
-  color: black;
-}
+
+/* Each person card */
 .person {
-  background-color: var(--background-color);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 1rem;
-  width: 220px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 260px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  color: var(--accent-color);
   transition: box-shadow 0.3s ease;
+  flex: 0 1 260px; /* allow flex-grow, but keep preferred width */
 }
 
 .person:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
 .person img {
   width: 140px;
   height: 140px;
-  border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--primary-color);
-  margin-bottom: 0.8rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 1px solid black;
 }
 
-.person h3 {
-  margin: 0.5rem 0 0.3rem;
-  font-weight: 700;
-  color: black;
+.profile_name {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.person h4 {
+  margin: 0.2rem 0 1rem;
+  font-size: 1rem;
+  color: #333;
 }
 
 .person p {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: var(--accent-color);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.iris {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #3a3ae1;
+  text-decoration: none;
+}
+
+.iris:hover {
+  color: #1313a9;
+  text-decoration: underline;
+}
+
+/* Mobile: stack cards and expand width */
+@media (max-width: 600px) {
+  .person {
+    width: 100%;
+    max-width: 90vw;
+  }
 }
