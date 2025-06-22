@@ -17,29 +17,33 @@
   <!-- Navigation Bar -->
   <site-header></site-header>
 
+
   <!-- Hero Section -->
   <section class="hero">
+  <div class="hero-video-wrapper">
     <video autoplay muted loop class="hero-video">
       <source src="assets/video/output.mp4" type="video/mp4" />
     </video>
-    <div class="hero-overlay">
-      <h1>Te Kura Rau Mahara</h1>
-      <h2 id="subtitle">Waikato Wearables Research Lab</h2>
-    </div>
-  </section>
+  </div>
+  <div class="hero-overlay">
+    <h1>Te Kura Rau Mahara</h1>
+    <h2 id="subtitle">Waikato Wearables Research Lab</h2>
+  </div>
+</section>
+
 
   <!-- Main Content -->
   <main class="intro">
     <h2>Welcome</h2>
  <p><b>Welcome to Te Kura Rau Mahara, the Waikato Wearables Research Lab.</b></p>
 <p>
-  We are a multidisciplinary team dedicated to advancing wearable technologies that enhance human capabilities.  
-  Our research spans cognitive function, prosthetics, electromyography (EMG), human-robot interaction (HRI), and related fields,  
+  We are a multidisciplinary team dedicated to advancing wearable technologies that aid enhance human capabilities.  
+  Our research spans cognitive function, prosthetics, Electroencephalography (EEG), electromyography (EMG), human-robot interaction (HRI), and related fields,  
   integrating scientific innovation with indigenous knowledge to create meaningful and culturally grounded solutions.  
 </p>
   <p>This site is a living draft; Please feel free to give feedback or collaborate with us using our <a href="contact.html">Form</a></p>
-
-    <h3>Recent Posts</h3>
+  <br><br>
+    <h3><a href="blog.html">Recent Posts</a></h3>
     <div id="summary-container" class="summary-list"></div>
   </main>
 
@@ -49,6 +53,23 @@
   <script type="module">
     import { loadPostSummaries } from '/assets/js/loadPosts.js';
     loadPostSummaries("summary-container", 2);
+
+    function updateZoom() {
+    const minWidth = 320;   // smallest screen (e.g., mobile)
+    const maxWidth = 1400;  // largest screen for normal layout
+    const minScale = 1.7;   // how much to zoom on smallest screen
+    const maxScale = 1;     // no zoom on wide screens
+
+    const width = window.innerWidth;
+    const ratio = (width - minWidth) / (maxWidth - minWidth);
+    const scale = maxScale + (minScale - maxScale) * (1 - Math.min(Math.max(ratio, 0), 1));
+
+    document.documentElement.style.setProperty('--zoom', scale.toFixed(3));
+    
+  }
+  window.addEventListener('resize', updateZoom);
+  window.addEventListener('DOMContentLoaded', updateZoom);
+
   </script>
 </body>
 

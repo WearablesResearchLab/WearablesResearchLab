@@ -36,6 +36,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* max-height: 190px; */
+  transition: transform 0.3s ease;
+  transform: scale(var(--zoom, 1));
+  background-color: white;
 }
 
 .hero-overlay {
@@ -114,11 +118,69 @@
   text-decoration: underline;
 }
 
+/* @media (max-width: 600px) { */
+  /* .hero { */
+    /* height: 40vh; don't shrink the hero */
+  /* } */
+/*  */
+  /* .hero-video { */
+    /* object-fit: cover; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* object-position: center; */
+    /* transform: scale(1.3); */
+    /* transform-origin: center; */
+  /* } */
+/*  */
+  /* .hero-overlay h1 { */
+    /* font-size: 1.6rem; */
+  /* } */
+/*  */
+  /* .hero-overlay h2 { */
+    /* font-size: 1rem; */
+  /* } */
+/* } */
+
+.hero {
+  position: relative;
+  height: 40vh;
+  max-height: 300px;
+  overflow: hidden;
+  width: 100%;
+  background: white; /* white background on the sides */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-video-wrapper {
+  width: 100%;
+  max-width: 1440px; /* or any max width you want */
+  height: 100%;
+  overflow: hidden;
+  background: white;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(var(--zoom, 1));
+  transition: transform 0.3s ease;
+  background: white;
+}
+
+
 
 
 @media (max-width: 600px) {
   .hero {
-    height: 25vh;
+    height: 25vh; /* match the desktop proportions more closely */
+  }
+
+  .hero-video {
+    /* transform: scale(1.5); zoom in */
+    transform-origin: center;
   }
 
   .hero-overlay h1 {
