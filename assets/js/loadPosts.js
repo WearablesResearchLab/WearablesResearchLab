@@ -8,7 +8,6 @@ export async function loadPostSummaries(containerId, limit = null) {
     const container = document.getElementById(containerId);
 
     try {
-        console.log("fuck me");
       const response = await fetch("posts/index.json");
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
