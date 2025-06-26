@@ -13,6 +13,7 @@
 
 .header_logo img {
   height: 50px;
+  max-height: 80px;
   object-fit: contain;
   display: block;
 }
