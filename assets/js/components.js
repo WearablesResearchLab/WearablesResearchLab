@@ -34,21 +34,20 @@ function loadCSSFiles(files) {
 
 // Usage example:
 loadCSSFiles([
-  '../css/header.css',
-  '../css/header.css',
-  '../css/footer.css',
-  '../css/index.css',
-  '../css/blog.css',
-  '../css/about.css',
-  '../css/pygments.css',
-  '../css/post.css',
-  '../css/contact.css',
-  '../css/body.css',
-  '../css/projects.css',
+  '/assets/css/header.css',
+  '/assets/css/footer.css',
+  '/assets/css/index.css',
+  '/assets/css/blog.css',
+  '/assets/css/about.css',
+  '/assets/css/pygments.css',
+  '/assets/css/post.css',
+  '/assets/css/contact.css',
+  '/assets/css/body.css',
+  '/assets/css/projects.css',
   // Markdown higlighting
   // "https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css",
   "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css",
-  // '../css/github_markdown.css',
+  'assets/css/github_markdown.css',
 ]);
 
 
