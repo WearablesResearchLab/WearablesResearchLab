@@ -1,21 +1,21 @@
-.contact-page {
+.contact_page {
   max-width: 600px;
   margin: 3rem auto;
   padding: 2rem;
 }
 
-.contact-form {
+.contact_form {
   display: flex;
   flex-direction: column;
 }
 
-.contact-form label {
+.contact_form label {
   margin-top: 1rem;
   font-weight: bold;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact_form input,
+.contact_form textarea {
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -23,7 +23,7 @@
   font-size: 1rem;
 }
 
-.contact-form button {
+.contact_form button {
   margin-top: 1.5rem;
   padding: 0.75rem;
   background-color: var(--accent-color);
@@ -35,6 +35,6 @@
   transition: background 0.3s ease;
 }
 
-.contact-form button:hover {
+.contact_form button:hover {
   background-color: #444;
 }
