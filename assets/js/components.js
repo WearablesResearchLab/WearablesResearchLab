@@ -48,7 +48,7 @@ loadCSSFiles([
   // Markdown higlighting
   // "https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css",
   "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css",
-  '../css/github_markdown.css',
+  // '../css/github_markdown.css',
 ]);
 
 
