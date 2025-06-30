@@ -7,20 +7,6 @@
     "path": "posts/Advancing Neuroscience and Indigenous Perspectives.html"
   },
   {
-    "title": "Sample EEG Post Title",
-    "date": "10 June 2025",
-    "description": "A short summary of this post for previews and listings.",
-    "authors": "",
-    "path": "posts/EEG_Project_Example\\template.html"
-  },
-  {
-    "title": "Sample {orstheretics} Post Title",
-    "date": "10 June 2025",
-    "description": "A short summary of this post for previews and listings.",
-    "authors": "",
-    "path": "posts/prosthetics_project_example\\template.html"
-  },
-  {
     "title": "FLAG Seminar - Community Engagement: Strategies for Meaningful Public Partnership",
     "date": "3 June 2025",
     "description": "Aotearoa Brain Project -  learn how to build meaningful partnerships between science and the community. Learn practical engagement strategies that create mutual benefit, enhance research impact, and foster genuine collaboration. ",
@@ -53,12 +39,5 @@
     "description": "This week, our discussions have continued to bridge neuroscience, physics, and indigenous knowledge, refining our approach to Targeted Ultrasound Stimulation (TUS) and its implications for brain function.",
     "authors": "Mitchell Head",
     "path": "posts/Exploring Theoretical Foundations.html"
-  },
-  {
-    "title": "Untitled",
-    "date": "",
-    "description": "",
-    "authors": "",
-    "path": "posts/2025-06-10.html"
   }
 ]
