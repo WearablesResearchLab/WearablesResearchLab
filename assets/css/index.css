@@ -1,68 +1,10 @@
-html, body {
-  height: 100%;
-  margin: 0;  
-  background-color: white;
-}
-
-:root {
-  --primary-color: rgba(255, 255, 255, 0.8);
-  --secondary-color: #ffffff;
-  --accent-color: #000000;
-  --video-back-color: rgb(55, 55,55);
-  --overlay-color: rgba(0, 0, 0, 0.4);
-  --text-overlay-bg: rgba(0, 0, 0, 0.5);
-  --border-color: #ccc;
-  --nav-links: #000000;
-  --footer-bg: #000000;
-  --footer-text: #ffffff;
-  --font-family: 'Libre Franklin', sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-family);
-  background-color: var(--secondary-color);
-  color: var(--accent-color);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: white;
-}
-
-
-.index_center {
-  text-align: center;
-}
-.intro {
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 950px; /* optional, limits width for better readability */
-  padding: 0 1rem; /* keep some side padding */
-  padding: 2rem;
-  flex-grow: 1;
-}
-
-h1, h2, h3, p, a {
-  font-family: var(--font-family);
-  color: var(--accent-color);
-  margin: 15px;
-  /* margin-bottom: 2rem; */
-}
-h1 {
-  margin-bottom: 0.5rem;
-}
-
 .back-button {
   display: inline-block;
-  margin: 1rem 10px 0 10px;
+  margin: 1rem 0;
   padding: 0.75rem 1.25rem;
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; /* same as .summary-item bg */
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 8px; /* same radius as .summary-item */
   color: var(--accent-color);
   text-decoration: none;
   font-size: 0.9rem;
@@ -70,45 +12,34 @@ h1 {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   max-width: 100px;
+  margin-left: 10px;
 }
 
 .back-button:hover {
-  background-color: #f1f1f1;
+  background-color: #f1f1f1; /* same as .summary-item:hover bg */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
+  color: var(--accent-color);
 }
+
+/* index styling */
 
 .hero {
   position: relative;
   height: 40vh;
-  min-height: 25vh;
   max-height: 300px;
   overflow: hidden;
   width: 100%;
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--video-back-color);
-}
-
-.hero-video-wrapper {
-  width: 100%;
-  max-width: 1440px;
-  height: 100%;
-  overflow: hidden;
-  background: white;
 }
 
 .hero-video {
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
-  transform: scale(var(--zoom, 1));
-  transform-origin: center;
+  object-fit: cover;
+  /* max-height: 190px; */
   transition: transform 0.3s ease;
-  background: var(--video-back-color);
-
+  transform: scale(var(--zoom, 1));
+  background-color: white;
 }
 
 .hero-overlay {
@@ -140,7 +71,8 @@ h1 {
 .hero-overlay h2 {
   font-size: 1.4rem;
   font-weight: 300;
-  margin: 0.5rem 0 0;
+  margin: 0;
+  margin-top: 0.5rem;
   background: var(--text-overlay-bg);
   padding: 0.3rem 1rem;
   border-radius: 6px;
@@ -153,11 +85,11 @@ h1 {
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.2rem; /* vertical spacing between posts */
 }
 
 .summary-item {
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; /* off-white */
   padding: 1.2rem;
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -186,9 +118,69 @@ h1 {
   text-decoration: underline;
 }
 
+/* @media (max-width: 600px) { */
+  /* .hero { */
+    /* height: 40vh; don't shrink the hero */
+  /* } */
+/*  */
+  /* .hero-video { */
+    /* object-fit: cover; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* object-position: center; */
+    /* transform: scale(1.3); */
+    /* transform-origin: center; */
+  /* } */
+/*  */
+  /* .hero-overlay h1 { */
+    /* font-size: 1.6rem; */
+  /* } */
+/*  */
+  /* .hero-overlay h2 { */
+    /* font-size: 1rem; */
+  /* } */
+/* } */
+
+.hero {
+  position: relative;
+  height: 40vh;
+  max-height: 300px;
+  overflow: hidden;
+  width: 100%;
+  background: white; /* white background on the sides */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-video-wrapper {
+  width: 100%;
+  max-width: 1440px; /* or any max width you want */
+  height: 100%;
+  overflow: hidden;
+  background: white;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(var(--zoom, 1));
+  transition: transform 0.3s ease;
+  background: white;
+}
+
+
+
+
 @media (max-width: 600px) {
   .hero {
-    height: 20vh;
+    height: 25vh; /* match the desktop proportions more closely */
+  }
+
+  .hero-video {
+    /* transform: scale(1.5); zoom in */
+    transform-origin: center;
   }
 
   .hero-overlay h1 {

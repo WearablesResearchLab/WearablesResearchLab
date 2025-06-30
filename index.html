@@ -5,90 +5,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Te Kura Mahara — Wearables Research Lab</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600&display=swap" rel="stylesheet">
-  <script defer src="assets/js/components.js"></script>
-  <!-- <script type="module" src="/assets/js/initHome.js"></script> -->
+
+  <!-- Web components -->
+  <script defer src="/assets/js/components.js"></script>
 </head>
 
-<body class="page_wrapper">
-  <header><site-header></site-header></header>
+<body>
+  <!-- Navigation Bar -->
+  <site-header></site-header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-video-wrapper">
-        <video autoplay muted loop class="hero-video">
-          <source src="assets/video/output.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="hero-overlay">
-        <h1>Te Kura Rau Mahara</h1>
-        <h2 id="subtitle">Waikato Wearables Research Lab</h2>
-      </div>
-    </section>
-    <br>
 
-    <div class="intro">
-      <h2 class="index_center">Welcome</h2>
-      <p><b>Welcome to Te Kura Rau Mahara, the Waikato Wearables Research Lab.</b></p>
-      <p>
-        We are a multidisciplinary team dedicated to advancing wearable technologies that enhance human capabilities.
-        Our research spans cognitive function, prosthetics, Electroencephalography (EEG), Transcranial Ultrasound
-        Stimulation (TUS), electromyography (EMG), human-robot interaction (HRI), and related fields,
-        integrating scientific innovation with indigenous knowledge to create meaningful and culturally grounded
-        solutions.
-      </p>
-      <p>This site is a living draft;<br> Please feel free to give feedback or collaborate with us using our<a href="contact.html">Form.</a></p>
+  <!-- Hero Section -->
+  <section class="hero">
+  <div class="hero-video-wrapper">
+    <video autoplay muted loop class="hero-video">
+      <source src="assets/video/output.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="hero-overlay">
+    <h1>Te Kura Rau Mahara</h1>
+    <h2 id="subtitle">Waikato Wearables Research Lab</h2>
+  </div>
+</section>
 
-      <h3 class="section-heading"><a href="blog.html">Recent Posts</a></h3>
-      <div id="summary-container" class="summary-list"></div>
-    </div>
+
+  <!-- Main Content -->
+  <main class="intro">
+    <h2>Welcome</h2>
+ <p><b>Welcome to Te Kura Rau Mahara, the Waikato Wearables Research Lab.</b></p>
+<p>
+  We are a multidisciplinary team dedicated to advancing wearable technologies that aid enhance human capabilities.  
+  Our research spans cognitive function, prosthetics, Electroencephalography (EEG), electromyography (EMG), human-robot interaction (HRI), and related fields,  
+  integrating scientific innovation with indigenous knowledge to create meaningful and culturally grounded solutions.  
+</p>
+  <p>This site is a living draft; Please feel free to give feedback or collaborate with us using our <a href="contact.html">Form</a></p>
+  <br><br>
+    <h3><a href="blog.html">Recent Posts</a></h3>
+    <div id="summary-container" class="summary-list"></div>
   </main>
-  
-  <br>
+
+  <site-footer></site-footer>
 
   <!-- Load JS -->
   <script type="module">
     import { loadPostSummaries } from '/assets/js/loadPosts.js';
     loadPostSummaries("summary-container", 2);
-    function easeInOutQuad(t) {
-      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-    }
 
-    function updateZoomAndHeroHeight() {
-      const minWidth = 320;
-      const maxWidth = 1400;
-      const minScale = 1.7;
-      const maxScale = 1;
+    function updateZoom() {
+    const minWidth = 320;   // smallest screen (e.g., mobile)
+    const maxWidth = 1400;  // largest screen for normal layout
+    const minScale = 1.7;   // how much to zoom on smallest screen
+    const maxScale = 1;     // no zoom on wide screens
 
-      const minHeightRatio = 0.25;
-      const maxHeightRatio = 0.65;
+    const width = window.innerWidth;
+    const ratio = (width - minWidth) / (maxWidth - minWidth);
+    const scale = maxScale + (minScale - maxScale) * (1 - Math.min(Math.max(ratio, 0), 1));
 
-      const width = window.innerWidth;
-      const rawRatio = (width - minWidth) / (maxWidth - minWidth);
-      const clampedRatio = Math.min(Math.max(rawRatio, 0), 1);
-      const easedRatio = easeInOutQuad(clampedRatio);
-
-      const scale = maxScale + (minScale - maxScale) * (1 - easedRatio);
-      document.documentElement.style.setProperty('--zoom', scale.toFixed(2));
-
-      const heightRatio = maxHeightRatio + (minHeightRatio - maxHeightRatio) * (1 - easedRatio);
-      const newHeight = `${Math.round(window.innerHeight * heightRatio)}px`;
-
-      const hero = document.querySelector('.hero');
-      const videoWrapper = document.querySelector('.hero-video-wrapper');
-      if (hero) hero.style.height = newHeight;
-      if (videoWrapper) videoWrapper.style.height = newHeight;
-    }
-
-    window.addEventListener('resize', updateZoomAndHeroHeight);
-    window.addEventListener('DOMContentLoaded', updateZoomAndHeroHeight);
-
-
+    document.documentElement.style.setProperty('--zoom', scale.toFixed(3));
+    
+  }
+  window.addEventListener('resize', updateZoom);
+  window.addEventListener('DOMContentLoaded', updateZoom);
 
   </script>
-
-  <footer><site-footer></site-footer></footer>
 </body>
 
 </html>

@@ -31,3 +31,6 @@ export async function loadPostSummaries(containerId, limit = null) {
       console.error(err);
     }
   }
+
+registerHTMLComponent('site-header', '/assets/html_components/header.html');
+registerHTMLComponent('site-footer', '/assets/html_components/footer.html');

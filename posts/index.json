@@ -3,30 +3,62 @@
     "title": "Weekly Insights – Advancing Neuroscience and Indigenous Perspectives",
     "date": "10 June 2025",
     "description": "This Week, we explored: Relational Quantum Physics and Te Ao Māori, Sound, Standing Waves, and Microtubules, Indigenous Cosmologies and Neuroscience, and Challenges in Publishing and Protecting IP .",
-    "path": "posts/1.html"
+    "authors": "Mitchell Head",
+    "path": "posts/Advancing Neuroscience and Indigenous Perspectives.html"
   },
   {
-    "title": "Weekly Insight: Bridging Neuroscience, Physics, and Indigenous Knowledge",
-    "date": "10 February 2025",
-    "description": "This week, our theoretical discussions continued to push the boundaries of neural engineering, exploring the intersections of targeted ultrasound stimulation (TUS), quantum biology, and indigenous knowledge systems.",
-    "path": "posts/3.html"
+    "title": "Sample EEG Post Title",
+    "date": "10 June 2025",
+    "description": "A short summary of this post for previews and listings.",
+    "authors": "",
+    "path": "posts/EEG_Project_Example\\template.html"
   },
   {
-    "title": "Weekly Blog: Advancing Performance Neuroscience and Wearable Development",
-    "date": "10 February 2025",
-    "description": "This past week, our discussions have centred on the transition from proof of concept to a fully wearable EEG-TUS device designed for elite athletes and drivers. This pivot—strongly supported by new partnerships with Formula 1 and High Performance Sport NZ—has provided clarity around system design and commercial direction.",
-    "path": "posts/4.html"
-  },
-  {
-    "title": "Weekly Insight: Exploring Theoretical Foundations in Neural Engineering",
-    "date": "3 February 2025",
-    "description": "This week, our discussions have continued to bridge neuroscience, physics, and indigenous knowledge, refining our approach to Targeted Ultrasound Stimulation (TUS) and its implications for brain function. ",
-    "path": "posts/2.html"
+    "title": "Sample {orstheretics} Post Title",
+    "date": "10 June 2025",
+    "description": "A short summary of this post for previews and listings.",
+    "authors": "",
+    "path": "posts/prosthetics_project_example\\template.html"
   },
   {
     "title": "FLAG Seminar - Community Engagement: Strategies for Meaningful Public Partnership",
     "date": "3 June 2025",
     "description": "Aotearoa Brain Project -  learn how to build meaningful partnerships between science and the community. Learn practical engagement strategies that create mutual benefit, enhance research impact, and foster genuine collaboration. ",
     "path": "posts/flag_seminar.html"
+  },
+  {
+    "title": "What Traveling Waves Can Teach Us About Smarter Brain Stimulation",
+    "date": "1 June 2025",
+    "description": "Ngā Waiata o Te Roro Blog | Neural Interfaces, Performance & Rhythm",
+    "authors": "",
+    "path": "posts/What Traveling Waves Can Teach Us About Smarter Brain Stimulation.html"
+  },
+  {
+    "title": "Weekly Blog: Advancing Performance Neuroscience and Wearable Development",
+    "date": "10 February 2025",
+    "description": "This past week, our discussions have centred on the transition from proof of concept to a fully wearable EEG-TUS device designed for elite athletes and drivers. This pivot—strongly supported by new partnerships with Formula 1 and High Performance Sport NZ—has provided clarity around system design and commercial direction.",
+    "authors": "Mitchell Head",
+    "path": "posts/Advancing Performance.html"
+  },
+  {
+    "title": "Weekly Insight: Bridging Neuroscience, Physics, and Indigenous Knowledge",
+    "date": "10 February 2025",
+    "description": "This week, our theoretical discussions continued to push the boundaries of neural engineering, exploring the intersections of targeted ultrasound stimulation (TUS), quantum biology, and indigenous knowledge systems.",
+    "authors": "Mitchell Head",
+    "path": "posts/Bridging Neuroscience.html"
+  },
+  {
+    "title": "Weekly Insight: Exploring Theoretical Foundations in Neural Engineering",
+    "date": "3 February 2025",
+    "description": "This week, our discussions have continued to bridge neuroscience, physics, and indigenous knowledge, refining our approach to Targeted Ultrasound Stimulation (TUS) and its implications for brain function.",
+    "authors": "Mitchell Head",
+    "path": "posts/Exploring Theoretical Foundations.html"
+  },
+  {
+    "title": "Untitled",
+    "date": "",
+    "description": "",
+    "authors": "",
+    "path": "posts/2025-06-10.html"
   }
 ]

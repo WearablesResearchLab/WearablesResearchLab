@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+  color: #111;
+}
+
+/* Container for people */
+.people_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center horizontally */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Each person card */
+.person {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 260px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  flex: 0 1 260px; /* allow flex-grow, but keep preferred width */
+}
+
+.person:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.person img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid black;
+}
+
+.profile_name {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.person h4 {
+  margin: 0.2rem 0 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.person p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.iris {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #3a3ae1;
+  text-decoration: none;
+}
+
+.iris:hover {
+  color: #0d0d78;
+  text-decoration: underline;
+}
+
+/* Mobile: stack cards and expand width */
+@media (max-width: 700px) {
+  .person {
+    width: 100%;
+    max-width: 90vw;
+  }
+}
