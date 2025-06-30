@@ -34,11 +34,11 @@ function loadCSSFiles(files) {
 
 // Usage example:
 loadCSSFiles([
+  'assets/css/about.css',
   'assets/css/header.css',
   'assets/css/footer.css',
   'assets/css/index.css',
   'assets/css/blog.css',
-  'assets/css/about.css',
   'assets/css/pygments.css',
   'assets/css/post.css',
   'assets/css/contact.css',
