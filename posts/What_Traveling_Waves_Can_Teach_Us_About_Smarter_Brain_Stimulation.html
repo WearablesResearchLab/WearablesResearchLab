@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What Traveling Waves Can Teach Us About Smarter Brain Stimulation</title>
+  <script defer src="/assets/js/components.js"></script>
+</head>
+<body>
+  <site-header></site-header>
+
+  <a href="javascript:history.back()" class="back-button">← Back</a>
+  <main class="post-main">
+    <article class="post-article markdown-body">
+      <header class="post-header">
+        <h1 class="post-title">What Traveling Waves Can Teach Us About Smarter Brain Stimulation</h1>
+        <p class="post-meta">
+          <span class="template_date">1 June 2025</span>
+          <span class="template_authors">by </span>
+        </p>
+        <p class="post-description">Ngā Waiata o Te Roro Blog | Neural Interfaces, Performance & Rhythm</p>
+      </header>
+      <section class="post-content">
+        <p>A recent study by Haigh et al. (2025) in <em>Cell Reports</em> adds an exciting piece to the puzzle we’ve been working on at Te Kura Rau Mahara: how to make brain stimulation more intelligent — more in sync with the brain’s natural rhythms. Their work with EEG-controlled transcranial magnetic stimulation (TMS) offers strong experimental evidence that <strong>neural excitability follows the spatial and temporal contours of traveling waves</strong>.</p>
+<h2>This idea — that the brain’s oscillations don’t just flicker in place but <strong>move like waves across the cortex</strong> — opens up a rich design space for neuromodulation. Here’s why this matters for our closed-loop EEG-TUS system, and how it might shape the next phase of our work.</h2>
+<p><strong><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/1f9e0/32.png" alt="🧠"> What the Study Found</strong></p>
+<p>In short, Haigh and colleagues used real-time EEG to time TMS pulses across the motor cortex. They mapped the motor-evoked potentials (MEPs) and found that the <strong>brain’s responsiveness to stimulation changes based on both when and where you stimulate</strong>. These phase preferences weren’t random: they formed <strong>gradients</strong> across the cortex — signatures of traveling waves.</p>
+<p>They tracked two key rhythms:</p>
+<ul>
+<li>
+<p><strong>Mu (8–13 Hz)</strong> — often associated with rest, movement inhibition, and internal focus.</p>
+</li>
+<li>
+<p><strong>Beta (14–30 Hz)</strong> — tied to active motor control and cognitive engagement.</p>
+</li>
+</ul>
+<p>Both showed <strong>bimodal traveling wave patterns</strong> — sweeping across the motor cortex in medial and lateral directions. Importantly, <strong>TMS was more effective when timed to specific phases of these waves</strong>. In other words, the brain’s readiness to respond isn’t constant — it’s a moving target.</p>
+<hr>
+<p><strong><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/1f3af/32.png" alt="🎯"> Why This Matters for Our EEG-TUS Work</strong></p>
+<p>We’ve been working on a <strong>closed-loop, EEG-gated transcranial ultrasound (TUS) system</strong> aimed at enhancing cognitive-motor performance in dynamic environments (think: racing, elite sports, driving simulators). Our approach hinges on one question:</p>
+<blockquote>
+<p><em>When is the brain ready to be nudged?</em></p>
+</blockquote>
+<p>This paper gives a clear answer: <strong>When the local oscillation is at a preferred phase — and when you stimulate along the wave’s propagation path.</strong></p>
+<p><strong>1. Temporal Targeting Isn’t Enough — Space Matters Too</strong></p>
+<p>We’ve been focusing on spectral entropy and instantaneous phase to time our stimulation. This study adds another layer: <strong>spatial phase gradients</strong>. If the oscillation is moving across the cortex like a ripple, <strong>where</strong> you stimulate matters just as much as <strong>when</strong>.</p>
+<p><strong>2. Traveling Waves Are Functional, Not Epiphenomenal</strong></p>
+<p>By comparing TMS, EEG, and invasive ECoG recordings across humans and a nonhuman primate, the authors showed a <strong>consistent mediolateral wave direction</strong>. And they didn’t just observe waves — they demonstrated that <strong>these waves modulate cortical excitability</strong>. This suggests traveling waves aren’t just background noise — they may <em>organize how information and responsiveness are routed</em> through the cortex.</p>
+<p><strong>3. Mu and Beta Have Distinct Impacts</strong></p>
+<p>We’ve debated whether to target mu or beta in our closed-loop architecture. This study shows:</p>
+<ul>
+<li>
+<p><strong>Mu waves travel slower (~26 cm/s)</strong>, suggesting a more stabilizing or inhibitory role.</p>
+</li>
+<li>
+<p><strong>Beta waves are faster (~49 cm/s)</strong>, likely more aligned with motor output and attention.</p>
+</li>
+</ul>
+<p>Crucially, <strong>beta isn’t just a harmonic of mu</strong> — it’s functionally distinct. That may help us decide which band to target based on the desired performance outcome: <strong>stability vs. readiness</strong>.</p>
+<hr>
+<p><strong><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/1f6e0/32.png" alt="🛠"> How We Might Apply These Insights</strong></p>
+<p>This study reinforces several directions in our EEG-TUS development:</p>
+<p><strong><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/2705/32.png" alt="✅"> Real-time Phase Targeting Algorithms</strong></p>
+<p>The authors use a <strong>Bayesian Temporal Prediction (BTP)</strong> algorithm to lock stimulation to specific phases of neural oscillations. We’ve already been developing phase detection pipelines — adapting BTP or integrating its prediction logic could boost precision.</p>
+<p><strong><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/2705/32.png" alt="✅"> Spatial Adaptation via EEG Topographies</strong></p>
+<p>Their findings encourage us to go beyond single-electrode phase tracking. Our spectral entropy maps (and Chris’s upcoming topographic heatmaps) could serve as proxies for <strong>estimating wave direction</strong> and <strong>steering TUS</strong> accordingly.</p>
+<p><strong><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/2705/32.png" alt="✅"> Multi-site or Adaptive TUS Delivery</strong></p>
+<p>Given the <strong>spiral and bidirectional wave patterns</strong>, it may be worth exploring <strong>dual-site stimulation</strong> or <strong>adaptive steering</strong> — stimulating where the wave <em>is going</em>, not just where it <em>is</em>.</p>
+<p><strong><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/2705/32.png" alt="✅"> Real-world Feedback Loop (EMG, kinematics)</strong></p>
+<p>Their use of EMG for real-time validation suggests we could explore <strong>EMG or movement telemetry</strong> as a loop-closing feedback channel in simulator experiments.</p>
+<hr>
+<p><strong><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/1f30a/32.png" alt="🌊"> Closing Thoughts: Ride the Wave</strong></p>
+<p>This paper gives weight to a compelling idea: that <strong>the brain’s excitability is dynamic, wave-driven, and phase-sensitive</strong>. For those of us designing non-invasive neuromodulation systems, this means stimulation should <strong>follow the brain’s natural geometry and timing</strong>, not just impose an external rhythm.</p>
+<p>At Te Kura Rau Mahara, we’re already prototyping systems that sense, respond, and adapt to the brain’s rhythms. This study helps us anchor those intuitions in hard data — and it pushes us to think not just in frequencies and triggers, but in <strong>paths, gradients, and flows</strong>.</p>
+<p>We’ll be building on these insights in our upcoming experiments. Stay tuned for updates on how this influences our simulation, targeting, and wearable EEG-TUS prototypes.</p>
+<p><em>Dr. Head, Ngā Waiata o Te Roro</em></p>
+<p><em>Te Kura Rau Mahara</em></p>
+
+      </section>
+    </article>
+  </main>
+
+  <site-footer></site-footer>
+</body>
+</html>
