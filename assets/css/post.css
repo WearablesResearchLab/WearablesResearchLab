@@ -1,14 +1,3 @@
-/* Separator dot between date and author */
-.template_date::after {
-  content: "•";
-  margin: 0 0.5rem;
-  color: #ccc;
-}
-
-/* Author name styling */
-.template_authors {
-  font-style: italic;
-}
 .post-main {
     max-width: 800px;
     margin: 2rem auto;
@@ -17,9 +6,10 @@
     border: 1px solid var(--border-color, #ccc);
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  }
-  .post-article h1 {
+}
+
+.post-article h1 {
     border-bottom: 2px solid var(--accent-color);
     padding-bottom: 0.3rem;
     margin-bottom: 1rem;
-  }
+}

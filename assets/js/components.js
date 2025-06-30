@@ -34,19 +34,20 @@ function loadCSSFiles(files) {
 
 // Usage example:
 loadCSSFiles([
-  '/assets/css/header.css',
-  '/assets/css/footer.css',
-  '/assets/css/index.css',
-  '/assets/css/blog.css',
-  '/assets/css/person.css',
-  '/assets/css/pygments.css',
-  '/assets/css/post.css',
-  '/assets/css/contact.css',
-  '/assets/css/template.css',
-  // '/assets/css/test.css',
+  'assets/css/header.css',
+  'assets/css/footer.css',
+  'assets/css/index.css',
+  'assets/css/blog.css',
+  'assets/css/about.css',
+  'assets/css/pygments.css',
+  'assets/css/post.css',
+  'assets/css/contact.css',
+  'assets/css/body.css',
+  'assets/css/projects.css',
   // Markdown higlighting
-"https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css",
-"https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css"
+  // "https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css",
+  "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css",
+  'assets/css/github_markdown.css',
 ]);
 
 
@@ -62,8 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Listen for content-loaded event from site-header
   siteHeader.addEventListener('content-loaded', () => {
-    const toggleBtn = siteHeader.querySelector('.menu-toggle');
-    const navLinks = siteHeader.querySelector('.nav-links');
+    const toggleBtn = siteHeader.querySelector('.header_menu_toggle');
+    const navLinks = siteHeader.querySelector('.header_nav_links');
 
     if (!toggleBtn || !navLinks) {
       console.error('Menu toggle button or nav-links not found');
@@ -85,4 +86,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
