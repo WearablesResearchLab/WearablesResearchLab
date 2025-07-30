@@ -1,0 +1,66 @@
+
+.publications_container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Libre Franklin', sans-serif;
+  color: #333;
+}
+
+.publications_year {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.25rem;
+}
+
+.publications_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.publications_item {
+  margin-bottom: 1.5rem;
+}
+
+.publications_title {
+  display: block;
+  font-size: 1rem;
+  color: var(--accent-color);
+  margin-bottom: 0.25rem;
+}
+
+.publications_description {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+.publications_pdf {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--accent-color);
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.publications_pdf:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .publications_container {
+    padding: 0 0.5rem;
+  }
+  .publications_pdf {
+    margin-top: 0.25rem;
+  }
+}

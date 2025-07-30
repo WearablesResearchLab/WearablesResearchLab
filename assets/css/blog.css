@@ -16,7 +16,11 @@
   padding: 1.2rem;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
-
+.page_title {
+  text-align: center;
+  margin-top: 2rem;
+  color: #111;
+}
 .post-item:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(-3px);

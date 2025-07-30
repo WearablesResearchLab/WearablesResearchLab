@@ -44,6 +44,8 @@ loadCSSFiles([
   'assets/css/contact.css',
   'assets/css/body.css',
   'assets/css/projects.css',
+  'assets/css/people.css',
+  'assets/css/publications.css',
   // Markdown higlighting
   // "https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css",
   "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css",
@@ -86,3 +88,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const headerEl = document.querySelector('site-header');
+  if (!headerEl) return;
+
+  // Watch for the header’s internals to be stamped out
+  const observer = new MutationObserver((_, obs) => {
+    const tkrm = headerEl.querySelector('#header_right_tkrm');
+    const navLinks = headerEl.querySelector('.header_nav_links');  // <-- dot selector
+    //const navbar = headerEl.querySelector('.header_navbar');  // <-- dot selector
+
+    if (tkrm && navLinks) {
+      obs.disconnect();
+
+      const p = window.location.pathname;
+      if (p === '/' || p.endsWith('/index.html')) {
+        tkrm.style.display = 'none';
+        navLinks.style.marginRight = '0px';    // <-- camelCase + px
+        navbar.style.paddingRight = '0px';   // <-- camelCase + px
+      } else {
+        tkrm.style.display = '';
+        navLinks.style.marginRight = '40px';   // <-- camelCase + px
+        navbar.style.paddingRight = '40px';   // <-- camelCase + px
+      }
+    }
+  });
+
+  observer.observe(headerEl, { childList: true, subtree: true });
+});
+// watch for child additions until we find the TKRM element
+observer.observe(headerEl, { childList: true, subtree: true });
