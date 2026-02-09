@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reading — Wearables Research Lab</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600&display=swap" rel="stylesheet">
+  <script defer src="/assets/js/components.js"></script>
+
+  <link rel="stylesheet" href="/assets/css/reading.css" />
+</head>
+
+<body>
+  <site-header></site-header>
+
+  <main class="reading_wrapper">
+    <header class="reading_header">
+      <h2 class="page_title">Suggested Reads</h2>
+    </header>
+
+    <section class="reading_controls" aria-label="Reading list search">
+      <label class="sr_only" for="readingSearch">Search</label>
+      <input id="readingSearch" class="search_input" type="search"
+        placeholder="Search anything (title, authors, venue, keywords)…" autocomplete="off" />
+      <p class="search_hint" id="searchHint">Showing all papers</p>
+    </section>
+
+    <ul class="reading_list" id="readingList">
+
+      <!-- Whole card links to DOI -->
+      <li class="reading_item">
+        <a class="reading_card_link" href="https://doi.org/10.1109/ACCESS.2025.3556920" target="_blank" rel="noopener">
+          <article class="reading_card">
+            <div class="reading_top">
+              <span class="reading_year">2025</span>
+              <span class="reading_cta">Open DOI ↗</span>
+            </div>
+
+            <h3 class="reading_title">
+              Offline vs Real-time Grasp Prediction Employing a Wearable High-Density Lightmyography Armband:
+              On the Control of Prosthetic Hands
+            </h3>
+
+            <p class="reading_authors">
+              Guan B; Godoy R V; Shahmohammadi M; Dwivedi A; Liarokapis M
+            </p>
+
+            <p class="reading_venue">
+              IEEE Access
+            </p>
+
+            <details class="reading_notes" onclick="event.preventDefault(); event.stopPropagation(); this.open = !this.open;">
+              <summary>Notes</summary>
+              <p>
+                Useful framing for what “real-time ready” means; compare offline vs deployment constraints.
+              </p>
+            </details>
+          </article>
+        </a>
+      </li>
+
+      <!-- If no DOI, link can go to PDF/arXiv/etc. (replace # with your best URL) -->
+      <li class="reading_item">
+        <a class="reading_card_link" href="#" aria-disabled="true" onclick="event.preventDefault();">
+          <article class="reading_card disabled">
+            <div class="reading_top">
+              <span class="reading_year">2025</span>
+              <span class="reading_cta muted">No DOI yet</span>
+            </div>
+
+            <h3 class="reading_title">
+              Leveraging Large Language Models for Automated Feature Extraction and Model Training in EMG-Based Motion Decoding
+            </h3>
+
+            <p class="reading_authors">
+              Dwivedi A; Guan B; Lahr G J G; Head M; König J L; Owen M W; Liarokapis M; Bifet A
+            </p>
+
+            <p class="reading_venue">
+              IEEE EMBC (Copenhagen, Denmark)
+            </p>
+
+            <details class="reading_notes" onclick="event.preventDefault(); event.stopPropagation(); this.open = !this.open;">
+              <summary>Notes</summary>
+              <p>
+                Good template for describing automated decoding pipelines; helpful when writing methods sections.
+              </p>
+            </details>
+          </article>
+        </a>
+      </li>
+
+      <li class="reading_item">
+        <a class="reading_card_link" href="https://doi.org/10.1109/TOH.2023.3347351" target="_blank" rel="noopener">
+          <article class="reading_card">
+            <div class="reading_top">
+              <span class="reading_year">2023</span>
+              <span class="reading_cta">Open DOI ↗</span>
+            </div>
+
+            <h3 class="reading_title">
+              How Positioning Wearable Haptic Interfaces on Limbs Influences Virtual Embodiment
+            </h3>
+
+            <p class="reading_authors">
+              Dwivedi A; Yu S; Hao C; Salvietti G; Prattichizzo D; Beckerle P
+            </p>
+
+            <p class="reading_venue">
+              IEEE Transactions on Haptics 16(4):446–459
+            </p>
+
+            <details class="reading_notes" onclick="event.preventDefault(); event.stopPropagation(); this.open = !this.open;">
+              <summary>Notes</summary>
+              <p>
+                Strong reference for wearable haptics placement and embodiment outcomes; great for design rationale.
+              </p>
+            </details>
+          </article>
+        </a>
+      </li>
+
+      <li class="reading_item">
+        <a class="reading_card_link" href="https://doi.org/10.1016/j.brs.2023.04.020" target="_blank" rel="noopener">
+          <article class="reading_card">
+            <div class="reading_top">
+              <span class="reading_year">2023</span>
+              <span class="reading_cta">Open DOI ↗</span>
+            </div>
+
+            <h3 class="reading_title">
+              Neuroethical Implications of Focused Ultrasound for Neuropsychiatric Illness
+            </h3>
+
+            <p class="reading_authors">
+              Asher R; Hyun I; Head M; Cosgrove G R; Silbersweig D
+            </p>
+
+            <p class="reading_venue">
+              Brain Stimulation 16(3):806–814
+            </p>
+
+            <details class="reading_notes" onclick="event.preventDefault(); event.stopPropagation(); this.open = !this.open;">
+              <summary>Notes</summary>
+              <p>
+                Great grounding for ethics/safety language when discussing neuromodulation and risk tradeoffs.
+              </p>
+            </details>
+          </article>
+        </a>
+      </li>
+
+    </ul>
+  </main>
+
+  <site-footer></site-footer>
+
+  <script>
+    const input = document.getElementById('readingSearch');
+    const list = document.getElementById('readingList');
+    const hint = document.getElementById('searchHint');
+
+    function applySearch() {
+      const q = (input.value || '').toLowerCase().trim();
+      const items = Array.from(list.querySelectorAll('.reading_item'));
+
+      let shown = 0;
+      items.forEach(item => {
+        const haystack = (item.textContent || '').toLowerCase();
+        const match = !q || haystack.includes(q);
+        item.style.display = match ? '' : 'none';
+        if (match) shown += 1;
+      });
+
+      hint.textContent = !q
+        ? `Showing all papers (${items.length})`
+        : `Showing ${shown} of ${items.length} for “${input.value}”`;
+    }
+
+    input.addEventListener('input', applySearch);
+    document.addEventListener('DOMContentLoaded', applySearch);
+  </script>
+</body>
+
+</html>
